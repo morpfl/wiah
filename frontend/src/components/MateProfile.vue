@@ -63,13 +63,6 @@
 <script>
 export default {
   name: 'MateProfile',
-  created: function () {
-    const Database = require('better-sqlite3');
-    /* eslint-disable no-console */
-    const db = new Database('wiah.db', { verbose: console.log });
-    const row = db.prepare('SELECT * FROM mates WHERE id=1');
-    console.log(row.firstName, row.lastName, row.email);
-  },
   data: () => ({
     form: {
         name: null,
